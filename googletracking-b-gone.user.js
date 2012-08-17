@@ -1,6 +1,6 @@
 // Google Tracking-B-Gone - FIXED version (by Vitaliy Filippov)
-// version 2.3
-// Release Date: 2012-05-22
+// version 2.4
+// Release Date: 2012-08-18
 // Original link http://sbdev.org
 // Now http://userscripts.org/scripts/show/120330
 // See also http://userscripts.org/scripts/show/132237
@@ -64,8 +64,8 @@ function doIt() {
 
   resultLinks = $x("//a");
   resultLinks.forEach(function(link) {  // loop over links
-    var oldLink = link.href; 
-    if (/^http:\/\/www.google/.test(oldLink) || /^https:\/\/encrypted.google/.test(oldLink)) {
+    var oldLink = link.href;
+    if (/^https?:\/\/www.google/.test(oldLink) || /^https:\/\/encrypted.google/.test(oldLink)) {
       var matches = /url\?(url|q)=(.+?)&/.exec(oldLink);
       if (matches != null) {
         link.href = unescape(matches[2]);
