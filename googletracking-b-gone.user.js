@@ -1,6 +1,6 @@
 // Google Tracking-B-Gone - FIXED version (by Vitaliy Filippov)
 // version 2.4
-// Release Date: 2012-08-18
+// Release Date: 2013-02-06
 // Original link http://sbdev.org
 // Now http://userscripts.org/scripts/show/120330
 // See also http://userscripts.org/scripts/show/132237
@@ -49,7 +49,7 @@ document.addEventListener('DOMSubtreeModified', function (event) {
 }, false);
 
 document.addEventListener('DOMNodeInserted', function (event) {
-  if (event.target.parentNode.id == 'xfoot') {
+  if (event.target.parentNode.id == 'gsr') {
     doRTR();
   }
 }, false);
@@ -89,6 +89,9 @@ function doRTR() {
       if (matches != null) {
         link.href = unescape(matches[2]);
       }
+    }
+    if (link.getAttribute('onmousedown')) {
+      link.removeAttribute('onmousedown');
     }
   });
 }
