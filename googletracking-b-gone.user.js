@@ -8,7 +8,7 @@
 // ===== INSTRUCTIONS =====
 //
 // This is a Greasemonkey user script.
-// Now supports Opera.
+// Now supports Opera (Presto).
 //
 // To use this script in Firefox, get Greasemonkey: http://greasemonkey.mozdev.org/
 // After you've installed it, come back to this page. A dialog box will
@@ -21,7 +21,8 @@
 // To use it in Opera, create a directory for userscripts, put this file into it,
 // then go to Settings -> Content -> JS and point userscript directory to the
 // newly created directory.
-// 
+// Also set 'User JavaScript on HTTPS' = on in about:config.
+//
 // ==UserScript==
 // @name           Google Tracking-B-Gone
 // @namespace      http://sbdev.org
