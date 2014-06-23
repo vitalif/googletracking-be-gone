@@ -9,6 +9,8 @@
 // This is a Greasemonkey user script.
 // Now supports Opera (Presto).
 //
+// === FIREFOX ===
+//
 // To use this script in Firefox, get Greasemonkey: http://greasemonkey.mozdev.org/
 // After you've installed it, come back to this page. A dialog box will
 // appear asking you if you want to install this script.
@@ -17,10 +19,17 @@
 // "Google Tracking-B-Gone" from the list on the left, and click
 // Uninstall.
 //
+// === OPERA ===
+//
 // To use it in Opera, create a directory for userscripts, put this file into it,
 // then go to Settings -> Content -> JS and point userscript directory to the
 // newly created directory.
 // Also set 'User JavaScript on HTTPS' = on in about:config.
+//
+// === CHROME/CHROMIUM ===
+//
+// To use it in Chrome, open Settings -> Extensions, enter developer mode by setting the checkbox,
+// drag-and-drop this file to chrome window and confirm installation.
 //
 // ==UserScript==
 // @name           Google Tracking-B-Gone
