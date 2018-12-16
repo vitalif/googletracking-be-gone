@@ -1,6 +1,6 @@
 // Google Tracking-B-Gone - FIXED version (by Vitaliy Filippov)
-// version 2.6
-// Release Date: 2014-10-08
+// version 2.7
+// Release Date: 2018-12-16
 // Homepage http://userscripts.org/scripts/show/120330
 // See also http://userscripts.org/scripts/show/132237
 //
@@ -67,9 +67,9 @@ document.addEventListener('DOMNodeInserted', function (event) {
 }, false);
 
 function doIt(e) {
-  var resultLinks = e ? e.querySelectorAll('h3.r') : document.body.querySelectorAll('div#search h3.r');
+  var resultLinks = e ? e.querySelectorAll('h3') : document.body.querySelectorAll('h3');
   for (var i = 0; i < resultLinks.length; i++) {
-    var link = resultLinks[i].childNodes[0];
+    var link = resultLinks[i].parentNode.nodeName == 'A' ? resultLinks[i].parentNode : resultLinks[i].childNodes[0];
     var oldLink = link.href;
     if (/^(https?:\/\/(www\.|encrypted\.)?google\.[^\/]*)?\/?url/.test(oldLink)) {
       var matches = /[\?&](url|q)=(.+?)&/.exec(oldLink);
