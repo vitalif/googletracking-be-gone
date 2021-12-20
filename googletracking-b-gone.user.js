@@ -1,6 +1,6 @@
 // Google Tracking-B-Gone - FIXED version (by Vitaliy Filippov)
-// version 2.7
-// Release Date: 2018-12-16
+// version 2.8
+// Release Date: 2021-12-21
 // Homepage http://userscripts.org/scripts/show/120330
 // See also http://userscripts.org/scripts/show/132237
 //
@@ -72,9 +72,9 @@ function doIt(e) {
     var link = resultLinks[i].parentNode.nodeName == 'A' ? resultLinks[i].parentNode : resultLinks[i].childNodes[0];
     var oldLink = link.href;
     if (/^(https?:\/\/(www\.|encrypted\.)?google\.[^\/]*)?\/?url/.test(oldLink)) {
-      var matches = /[\?&](url|q)=(.+?)&/.exec(oldLink);
+      var matches = /[\?&]url=(.+?)&/.exec(oldLink);
       if (matches != null) {
-        link.href = unescape(matches[2]);
+        link.href = unescape(matches[1]);
       }
     }
     // Clear attached event listeners so google can't mangle urls on mouse click
