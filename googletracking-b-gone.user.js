@@ -35,9 +35,10 @@
 // @name           Google Tracking-B-Gone
 // @namespace      http://sbdev.org
 // @description    Strips click tracking from Google search results
-//
+// @license        MIT
 // @include        http://*.google.*
 // @include        https://*.google.*
+// @version        2.9
 // ==/UserScript==
 
 // make sure we run at least once, regardless of search results page version
