@@ -1,8 +1,8 @@
 // Google Tracking-B-Gone - FIXED version (by Vitaliy Filippov)
 // version 2.9
 // Release Date: 2023-03-12
-// Homepage http://userscripts.org/scripts/show/120330
-// See also http://userscripts.org/scripts/show/132237
+// Published on https://openuserjs.org/scripts/vitalif/Google_Tracking-B-Gone
+// Published on https://greasyfork.org/en/scripts/1810-google-tracking-b-gone
 //
 // ===== INSTRUCTIONS =====
 //
